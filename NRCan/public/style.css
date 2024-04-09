@@ -1,0 +1,86 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+}
+
+.program-box {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    background-color: #e6ffe6;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    overflow-y: auto; 
+}
+
+.chartContainer {
+    margin: 5% 5% 5% 10%;
+    max-width: 50%;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    text-align: center;
+}
+
+.webTitle, .subTitle {
+    margin: 0 0 0 20%;
+    font-size: 3rem;
+} 
+.subTitle{
+    margin-left: 26%;
+}
+.disclaimer {
+    font-size: 14px;
+}
+
+.paraContainer {
+    max-width: 37.5rem;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    padding-left: 17%;
+}
+
+.introPara {
+    margin-bottom: 5%;
+}
+
+.image-container {
+    width: 33.33%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    overflow: hidden; 
+    z-index: 1; 
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to left, transparent, rgba(255, 255, 255, 3));
+    z-index: 2;
+}

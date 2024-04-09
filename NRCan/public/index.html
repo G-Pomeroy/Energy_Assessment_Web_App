@@ -1,0 +1,136 @@
+<!-- Solo Learning Project by Greg Pomeroy for the class ICOM -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NRCan Web App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
+<link href="../public/style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="content">
+        <h1 class="webTitle">Home Energy Program</h1>
+        <h1 class="subTitle">Questionnaire </h1>
+    </div>
+    <br>
+
+    <div class="contentContainer">
+        <div class="paraContainer">
+            <div class="introPara">
+                <p>
+                    This website acts as a convenient starting point to understanding
+                    what home energy programs you may be eligible for on both a federal and
+                    provincial level. After answering some basic profiling questions regarding your current living situation, you'll be
+                    shown all applicable energy programs that you may be eligible for.
+                </p>
+                <p>
+                    This questionnaire is intended for those living in a single family home 
+                    in the province of Nova Scotia. If you own a multi-residential home, or own rental units, and have questions 
+                    regarding your eligibility, please contact Efficiency Nova Scotia for more information.
+                </p>
+                <p class="disclaimer">
+                    <b>Please note:</b> This questionnaire is not meant to be 100% accurate or override any decision from any provincial and/or federal
+                    clean energy program providers. Please speak with these providers to ensure you meet all the programs requirements before
+                    proceeding.
+                </p>
+        </div>
+
+            <form method="POST" id="energyForm" action="process_form.php">
+            <h3>Please fill out each question:</h3>
+            <br>
+            <div class="formQuestion">
+                <h4>1. How many people live in your household?:</h4>
+                    <select id="members" name="members">
+                        <option disabled selected value>Select an Option</option>
+                        <option value="1 Person">1 Person</option>
+                        <option value="2-4 People">2 - 4 People</option>
+                        <option value="5+ People">+5 People</option>
+                    </select>
+            </div>
+
+            <div class="formQuestion">
+            <h4>
+                2. What is your maximum household income?:
+            <br>
+                (This can be found on Line 236 on your return assesment)
+            </h4>
+                <select id="income" name="income">
+                    <option disabled selected value>Select an Option</option>
+                    <option value="Up to $27,800">Up to $27,800</option>
+                    <option value="Up to $52,600">Up to $52,600</option>
+                    <option value="Up to $72,900">Up to $72,900</option>
+                    <option value="$72,900 or More">$72,900 or More</option>
+                </select>
+            </div>
+            <br>
+            <div class="formQuestion">
+                <h4>3. Do you reside in one of the following areas?</h4>
+                <ul>
+                    <li>Town of Amherst</li>
+                    <li>Town of Bidgewater</li>
+                    <li>Cumberland County</li>
+                    <li>East Hants</li>
+                    <li>District of Lunenburg</li>
+                    <li>Victoria County</li>
+                    <li>District of Barrington</li>
+                    <li>District of Chester</li>
+                    <li>Inverness County</li>
+                    <li>Town of New Glasgow</li>
+                    <li>District of Yarmouth</li>
+                </ul>
+                <br>
+                <select id="district" name="district">
+                    <option disabled selected value>Select an Option</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+            <br>
+            <div class="formQuestion">
+                <h4>4. Are you the primary owner of your household?</h4>
+                <select id="primary_owner" name="primary_owner">
+                    <option disabled selected value>Select an Option</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+            <br>
+            <div class="formQuestion">
+                <h4>5. Do you live within a First Nations Band or Community?</h4>
+                <select id="first_nations" name="first_nations">
+                    <option disabled selected value>Select an Option</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+            <br>
+            <div class="formQuestion">
+                <h4>Would you be interested in Solar energy options?</h4>
+                <select id="solar" name="solar">
+                    <option disabled selected value>Select an Option</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+            <br>
+            <div id="btnGroup">
+                <button type="submit">Submit</button>
+                <button type="reset">Reset</button>
+            </div>
+        </form>
+    </div>
+
+
+
+        <div class="container">
+            <div class="image-container">
+                <img src="../images/neighbourhood.jpg" alt="Image of Neighbourhood">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
